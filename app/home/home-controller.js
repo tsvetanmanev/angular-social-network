@@ -10,5 +10,13 @@ angular.module('socialNetwork.home',['ngRoute'])
     }])
     
     .controller('HomeCtrl',['$scope', function($scope){
-        $scope.hello = 'Zdrasti men!';
+        $scope.login = function (user) {
+            console.log(user);
+        };
+
+        $scope.register = function (user) {
+            console.log(user);
+        };
+
+        //TODO: Add logic 2:25
     }])
