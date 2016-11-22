@@ -18,5 +18,5 @@ angular.module('socialNetwork.home',['ngRoute'])
             console.log(user);
         };
 
-        //TODO: Add logic 2:25
+        //TODO: Continue with authentication.js 2:30
     }])

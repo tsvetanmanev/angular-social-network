@@ -4,9 +4,10 @@
 angular.module('socialNetwork', [
   'ngRoute',
   'socialNetwork.home'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
+])
+  .config(['$locationProvider', '$routeProvider', function ($locationProvider, $routeProvider) {
+    $locationProvider.hashPrefix('!');
 
-  $routeProvider.otherwise({redirectTo: '/'});
-}]);
+    $routeProvider.otherwise({ redirectTo: '/' });
+  }])
+  .const('BASE_URL', 'http://softuni-social-network.azurewebsites.net/');
