@@ -10,4 +10,4 @@ angular.module('socialNetwork', [
 
     $routeProvider.otherwise({ redirectTo: '/' });
   }])
-  .const('BASE_URL', 'http://softuni-social-network.azurewebsites.net/');
+  .constant('BASE_URL', 'http://softuni-social-network.azurewebsites.net/');

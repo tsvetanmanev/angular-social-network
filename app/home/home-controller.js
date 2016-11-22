@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('socialNetwork.home',['ngRoute'])
+angular.module('socialNetwork.home',['ngRoute','socialNetwork.users.authentication'])
 
     .config(['$routeProvider', function($routeProvider){
         $routeProvider.when('/', {
@@ -9,13 +9,13 @@ angular.module('socialNetwork.home',['ngRoute'])
         });
     }])
     
-    .controller('HomeCtrl',['$scope', function($scope){
+    .controller('HomeCtrl',['$scope', "authentication", function($scope, authentication){
         $scope.login = function (user) {
-            console.log(user);
+            authentication.loginUser(user);
         };
 
         $scope.register = function (user) {
-            console.log(user);
+            authentication.registerUser(user);
         };
 
         //TODO: Continue with authentication.js 2:30
